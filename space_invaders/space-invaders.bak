@@ -107,35 +107,3 @@
 (define G2 (make-game (list I1) (list M1) T1))
 (define G3 (make-game (list I1 I2) (list M1 M2) T1))
 
-;; =================
-;; Functions:
-
-;; Game -> Game
-;; start program by evaluating (main G0)
-(define (main g)
-  (big-bang g                ; Game
-    (on-tick tock)           ; Game -> Game
-    (to-draw render)         ; Game -> Image
-    (stop-when end?)         ; Game -> Boolean
-    (on-key key-event)))     ; Game key-event -> Game
-
-
-;; Game -> Game
-;; produce the next game state with incremented positions
-;; !!!
-(define (tock g) ...)
-
-
-;; Game -> Game
-;; produce an image of the current game state
-;; !!!
-(define (render g) ...)
-
-
-;; Game -> Boolean
-;; stop the game if an invader reaches the bottom
-(define (end? g)
-  (if (= 
-
-
-
